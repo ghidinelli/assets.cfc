@@ -8,7 +8,9 @@ We use Gulp, an awesome Javascript-based task runner, to handle the concatenatio
 
 The challenge, therefore, is how to get this always-changing filename into our markup for delivery to the user?  One option is gulp-inject which will update the HTML with the new CSS/JS filenames but this causes noisy commits. Instead, we created this very lightweight asset manager which reads a JSON file and translates from original to cachebusted name:
 
-    <link rel="stylesheet" href="#asset.getAsset('style.css')#"> => <link rel="stylesheet" href="styles-j2l3zYq59kj.css">
+    <link rel="stylesheet" href="#asset.getAsset('style.css')#">
+    outputs
+    <link rel="stylesheet" href="styles-j2l3zYq59kj.css">
 
 # Generate rev-manifest.json
 
